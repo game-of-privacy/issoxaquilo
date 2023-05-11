@@ -2,7 +2,7 @@
 <html xmlns='http://www.w3.org/1999/xhtml' lang='' xml:lang=''>
 <head>
 	<meta charset='utf-8' />
-	<meta name="viewport" content="width=1200">
+	<meta name='viewport' content='width=device-width, user-scalable=no' />
 	<title>issoxaquilo</title>
 	<style type='text/css'>
 
@@ -143,10 +143,10 @@
 		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":28226624,"index.wasm":17867504},"focusCanvas":true,"gdnativeLibs":[],"serviceWorker":"index.service.worker.js"};
 		var engine = new Engine(GODOT_CONFIG);
 		
-		if (window.innerWidth < window.innerHeight) {
+		if (window.innerWidth < window.innerHeight || /Mobi|Android/i.test(navigator.userAgent)) {
 		var viewport = document.querySelector("meta[name=viewport]");
 		viewport.setAttribute('content', 'height=' + (window.innerHeight * 2) + 'px, width=' + window.innerWidth + 'px, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-		}
+	}
 
 		(function() {
 			const INDETERMINATE_STATUS_STEP_MS = 100;
