@@ -154,7 +154,15 @@
 
 	if (/webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		// Está em um dispositivo móvel - exibir alerta para ativar o modo para computador
-		alert("Sou lindo");
+		alert("Sou linde");
+		
+		// Ativar o modo para computador
+		var viewport = document.querySelector("meta[name=viewport]");
+		viewport.setAttribute('content', 'width=device-width, initial-scale=1');
+	}
+	if (/Safari/i.test(navigator.userAgent)) {
+		// Está em um dispositivo móvel - exibir alerta para ativar o modo para computador
+		alert("Ative o modo Para Computador");
 		
 		// Ativar o modo para computador
 		var viewport = document.querySelector("meta[name=viewport]");
